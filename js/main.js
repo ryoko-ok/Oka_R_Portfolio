@@ -1,5 +1,7 @@
 (() => {
-    // create an instance of the AJAX object
+    // XHTTP is the old tried-and-true way of doing AJAX - still relevant, but there are better options
+    
+     // create an instance of the AJAX object
     let myReq = new XMLHttpRequest;
 
     // add an event handler so that we can track the stages of the request and respond accordingly
@@ -28,28 +30,33 @@
             // request isn't ready yet, keep waiting...
             console.log(`Request state: ${myReq.readyState}. Still processing...`);
         }
+
     }
 
     // this receives the data payload from our AJAX request, parses it (turns the returned JSON object back into a plain JavaScript object) and renders the data to our view (the markup in index.html)
     function handleDataSet(data) {
         let myData = JSON.parse(data),
-            softwareSection = document.querySelector('.software-section'),
-            softwareTemplate = document.querySelector('#software-template').content;
+            softSection = document.querySelector('.soft-section'),
+            softTemplate = document.querySelector('#soft-template').content;
 
         debugger;
 
         // loop through the JavaScript object and for each user, make a copy of the user template we find at the bottom of index.html, populate it with the user's data, and put that fresh copy in the users section in index.html
 
         for (let software in myData) {
-            let currentSoftware = softwareTemplate.cloneNode(true),
-                currentSoftwareText = currentSoftware.querySelector('.software').children;
+            let currentSoft = softTemplate.cloneNode(true),
+                currentSoftText = currentSoft.querySelector('.soft').children;
 
-            currentSoftwareText[1].textContent = myData[software].design;
-            currentSoftwareText[2].textContent = myData[software].office;
-            currentSoftwareText[3].textContent = myData[softWare].others;
+            currentSoftText[1].textContent = myData[software].name;
+            currentSoftText[2].textContent = myData[software].software1;
+            currentSoftText[3].textContent = myData[software].software2;
+            currentSoftText[4].textContent = myData[software].software3;
+            currentSoftText[5].textContent = myData[software].software4;
+            currentSoftText[6].textContent = myData[software].software5;
+
 
             // add this new user to the view
-            softwareSection.appendChild(currentSoftware);
+            softSection.appendChild(currentSoft);
         }
 
         console.log(data);

@@ -32,7 +32,11 @@
         <hr>
 
         <main>
-        <section class=".software-section"></section>
+
+            <section class="soft-section">
+                <!-- user-template copies get rendered here -->
+        </section>
+
         </main>
 
         <!-- footer -->
@@ -40,6 +44,22 @@
 
         </footer>
     </div>
+
+    <!-- template files here (these don't render - the contents are reusable and get cloned at runtime) -->
+    <template id="soft-template">
+        <div class="soft">
+            <h1 class="hidden"></h1>
+            <h2 class="name"></h2>
+            <p class="software1"></p>
+            <p class="software2"></p>
+            <p class="software3"></p>
+            <p class="software4"></p>
+            <p class="software5"></p>
+        </div>
+    </template>
+    <!-- end templates -->
+    
+
     <!-- script -->
     <script type="module" src="js/main.js"></script>
 </body>
