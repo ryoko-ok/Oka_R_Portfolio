@@ -17,7 +17,7 @@ a:link, a:visited {
 }
 
 a:hover, a:active { 
-	color: red;
+	color: #ffb3b3;
 	text-decoration: blink; 
 	font-weight: bold;
 	padding: 5px;
@@ -26,16 +26,17 @@ a:hover, a:active {
 .container {
 	margin: 0 auto;
     width: 1024px;
-	background-color: white;
+    background-color: white;
+    text-align: center;
 }
 
 
 #title {
-	font-family: 'Satisfy', cursive, sans-serif;
+	font-family: 'Dancing Script medium 600', cursive, sans-serif;
 	font-size: 80px;
 	color: red;
 	margin: 100px 40px;
-	text-align: center;
+    text-align: center;
 }
 
 #discription {
@@ -44,3 +45,4 @@ a:hover, a:active {
 	color: #808080;
 	margin-top: 20px;
 }
+
