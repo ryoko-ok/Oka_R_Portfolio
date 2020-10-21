@@ -17,7 +17,7 @@ a:link, a:visited {
 }
 
 a:hover, a:active {
-  color: red;
+  color: #ffb3b3;
   text-decoration: blink;
   font-weight: bold;
   padding: 5px;
@@ -27,10 +27,11 @@ a:hover, a:active {
   margin: 0 auto;
   width: 1024px;
   background-color: white;
+  text-align: center;
 }
 
 #title {
-  font-family: "Satisfy", cursive, sans-serif;
+  font-family: "Dancing Script medium 600", cursive, sans-serif;
   font-size: 80px;
   color: red;
   margin: 100px 40px;
@@ -86,9 +87,20 @@ a:hover, a:active {
 }
 
 .logoHeader {
-  width: 150px;
+  width: 100px;
   height: auto;
   margin: 10px 0px 20px 20px;
+}
+
+.soft-section {
+  display: flex;
+}
+
+.soft {
+  flex: 1;
+}
+.soft .name, .soft .software1, .soft .software2, .soft .software3, .soft .software4, .soft .software5 {
+  margin: 15px;
 }
 
 /*# sourceMappingURL=master.css.map */
